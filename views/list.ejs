@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Todolist v-1</title>
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1><%=Listtitle%></h1>
+    </div>
+    <div class="box">
+      <% for(let i = 0;i < todolistitem.length;i++){%>
+      <div class="item">
+        <input type="checkbox" />
+        <p><%= todolistitem[i] %></p>
+      </div>
+
+      <% } %>
+      <form action="/" method="post">
+        <input
+          name="inputtodolist"
+          placeholder="add new item"
+          type="text"
+          autocomplete="off"
+        />
+        <button type="submit" name="button" value="<%=Listtitle%>">+</button>
+      </form>
+    </div>
+    <div class="item:last-child"></div>
+  </body>
+</html>
